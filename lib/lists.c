@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "linked_lists.h"
+#include "my.h"
 
 int is_list_empty(linked_list_t head)
 {
@@ -12,13 +13,13 @@ int is_list_empty(linked_list_t head)
 void show_list(linked_list_t head)
 {
     if (head == NULL)
-        printf("List is empty.");
+        my_putstr("List is empty.");
 
     linked_list_t cursor = head;
 
     while (cursor != NULL)
     {
-        printf("%s\n", cursor->data);
+        my_putstr(cursor->data);
         cursor = cursor->next;
     }
 }
